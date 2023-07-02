@@ -1,0 +1,32 @@
+{% extends 'user/dash.html' %}
+{% block content %}
+
+<div class="card">
+<div>
+
+{% for i in data %}
+    <div class="card md-4" style="display:flex;">
+    <div class="card" style="display:flex;border:1px solid black;">
+                     <div style="margin-top:50px;margin-left:30px;color:white;">
+
+                    <div><img src="{{i.image.url}}" width="150px" height="150px"></div>
+                     <br><br>
+                    <div>
+                      <p style="color:black;">Name : {{i.name}}</p>
+                      <p style="color:black;">Type : {{i.type}}</p>
+                      <p style="color:black;">Price : {{i.price}}</p>
+                      <button class="btn btn-info" type="submit">Add to Cart</button>
+                     </div>
+                   </div>
+                   </div><br>
+</div>
+                   {% endfor %}
+
+
+</div>
+
+</div>
+
+
+
+{% endblock %}
